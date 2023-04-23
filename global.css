@@ -1,20 +1,132 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
-:root{
-    /* primary */
-    --clr-dark-cyan:hsl(158, 36%, 37%);
-    --clr-cream:hsl(30, 38%, 92%);
-    /* neutral */
-    --clr-very-dark-blue:hsl(212, 21%, 14%);
-    --clr-dark-grayshi-blue:hsl(228, 12%, 48%);
-    --clr-white:hsl(0, 0%, 100%);
-    /* font size */
-    --fs-paragraph:0.875rem;
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap");
+:root {
+  /* primary */
+  --clr-dark-cyan: hsl(158, 36%, 37%);
+  --clr-cream: hsl(30, 38%, 92%);
+  /* neutral */
+  --clr-very-dark-blue: hsl(212, 21%, 14%);
+  --clr-dark-grayshi-blue: hsl(228, 12%, 48%);
+  --clr-white: hsl(0, 0%, 100%);
+  /* font size */
+  --fs-paragraph: 0.875rem;
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    min-height: 100vh;
+body {
+  min-height: 100vh;
+}
+
+main {
+  width: 100%;
+  background-color: var(--clr-cream);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img.product-image {
+  width: 375px;
+  /* border-radius: 10px 10px 0px 0px; */
+}
+.product-description {
+  background-color: var(--clr-white);
+  flex-grow: 1;
+  /* border-radius: 0px 0px 10px 10px; */
+  width: 375px;
+  padding: 24px;
+}
+.product-preview {
+    /* margin-top: 5px; */
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+  letter-spacing: 5px;
+  /* Aurometal Saurus */
+  color: var(--clr-dark-grayshi-blue);
+}
+.product-title {
+  /* Display */
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
+  color: var(--clr-very-dark-blue);
+  margin-top: 12px;
+}
+.product-details {
+  /* Body */
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 23px;
+  color: var(--clr-dark-grayshi-blue);
+  margin-top: 16px;
+}
+.product-prices-container {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+}
+.product-current-price {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
+  color:var(--clr-dark-cyan);
+  margin-right: 20px;
+}
+.product-old-price {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 23px;
+  text-decoration-line: line-through;
+  color: var(--clr-dark-grayshi-blue);
+}
+.product-add-cart{
+    width: 100%;
+    color: var(--clr-white);
+    background: #3D8168;
+    border-radius: 8px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 15px 0px 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    margin-top: 24px;
+}
+.product-add-cart:hover{
+    background-color:#1A4032;
+    cursor: pointer;
+}
+.product-add-cart > img{
+    margin-right: 10px;
+}
+
+@media only screen and (min-width:376px) and (max-width: 600px){
+    main{
+         padding: 28px 28px;
+    }
+    img.product-image {
+        border-radius: 10px 10px 0px 0px;
+    }
+    .product-description{
+        border-radius: 0px 0px 10px 10px;
+    }
 }
